@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import ml
 from flask import Flask, render_template, request
 
-# COUNT=0
+COUNT=0
 app = Flask(__name__)
 
 @app.route('/')
@@ -38,14 +38,13 @@ def submit():
     plt.tight_layout()
 
 
-#     plt.savefig('static/{}.jpg'.format(COUNT))
-#     imgname='{}.jpg'.format(COUNT)
-    plt.savefig("static/reg.jpg")
-#     imgname="reg.jpg"
+    plt.savefig('static/{}.jpg'.format(COUNT))
+    imgname='{}.jpg'.format(COUNT)
+
     plt.close()
-#     COUNT += 1
-# below in bracket ,filename=imgname
-    return render_template("result.html",scores=s0,diff=diff,msg=msg,hour=h0)
+    COUNT += 1
+
+    return render_template("result.html",scores=s0,diff=diff,msg=msg,hour=h0,filename=imgname)
 
 if __name__ == '__main__':
     app.run(debug=True)
