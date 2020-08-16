@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import ml
 from flask import Flask, render_template, request
 
-COUNT=0
+COUNT=10
 app = Flask(__name__)
 
 @app.route('/')
