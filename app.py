@@ -41,10 +41,11 @@ def submit():
 #     plt.savefig('static/{}.jpg'.format(COUNT))
 #     imgname='{}.jpg'.format(COUNT)
     plt.savefig("static/reg.jpg")
-    imgname="reg.jpg"
+#     imgname="reg.jpg"
     plt.close()
 #     COUNT += 1
-    return render_template("result.html",scores=s0,diff=diff,msg=msg,hour=h0,filename=imgname)
+# below in bracket ,filename=imgname
+    return render_template("result.html",scores=s0,diff=diff,msg=msg,hour=h0)
 
 if __name__ == '__main__':
     app.run(debug=True)
