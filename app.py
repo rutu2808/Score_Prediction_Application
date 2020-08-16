@@ -44,4 +44,4 @@ def submit():
     COUNT += 1
     return render_template("result.html",scores=s0,diff=diff,msg=msg,hour=h0,filename=imgname)
 
-app.run(port=5000, debug=True)
+app.run(debug=True)
