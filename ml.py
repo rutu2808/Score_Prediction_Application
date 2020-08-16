@@ -12,7 +12,7 @@ y=df["Scores"]
 # find relationship between the data using scatter plot
 def plot():
     plt.scatter(x,y)
-    plt.xlabel("Hours Sudied")
+    plt.xlabel("Hours Studied")
     plt.ylabel("Percentage Score")
     plt.title("Hours studied Vs Scores")
     plt.savefig('static/scatter_plot.png')
